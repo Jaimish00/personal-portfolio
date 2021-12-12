@@ -1,15 +1,12 @@
 import React from 'react';
 import styles from '../styles/Navigation.module.css';
 import Link from 'next/link';
+import Logo from './Logo';
 
 const Navigation = () => {
 	return (
 		<nav className={styles.nav}>
-			<div className='logo-container'>
-				<Link href='/'>
-					<a>Sample Logo</a>
-				</Link>
-			</div>
+			<Logo />
 			<ul>
 				<li className={styles.link_hover_effect}>
 					<Link href='/blog'>

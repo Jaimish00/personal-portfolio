@@ -1,0 +1,68 @@
+.logo_container {
+	position: relative;
+	z-index: 1;
+}
+
+.logo_container a {
+	padding: 0 5px;
+	color: var(--fg-color);
+	font-weight: 700;
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+.logo_container a::before,
+.logo_container a::after {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 50%;
+	height: 2px;
+	margin-top: -1px;
+	background: var(--fg-color);
+	content: '';
+	z-index: -1;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	pointer-events: none;
+}
+
+.logo_container a::before {
+	-webkit-transform: translateY(-20px);
+	-moz-transform: translateY(-20px);
+	transform: translateY(-20px);
+}
+
+.logo_container a::after {
+	-webkit-transform: translateY(20px);
+	-moz-transform: translateY(20px);
+	transform: translateY(20px);
+}
+
+.logo_container a:hover,
+.logo_container a:focus {
+	color: #fff;
+}
+
+.logo_container a:hover::before,
+.logo_container a:hover::after,
+.logo_container a:focus::before,
+.logo_container a:focus::after {
+	opacity: 0.7;
+}
+
+.logo_container a:hover::before,
+.logo_container a:focus::before {
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.logo_container a:hover::after,
+.logo_container a:focus::after {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
