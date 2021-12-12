@@ -11,19 +11,19 @@ const Navigation = () => {
 				</Link>
 			</div>
 			<ul>
-				<li>
+				<li className={styles.link_hover_effect}>
 					<Link href='/blog'>
 						<a>Blogs</a>
 					</Link>
 				</li>
 
-				<li>
+				<li className={styles.link_hover_effect}>
 					<Link href='/product'>
 						<a>Products</a>
 					</Link>
 				</li>
 
-				<li>
+				<li className={styles.link_hover_effect}>
 					<Link href='/docs'>
 						<a>Docs</a>
 					</Link>
